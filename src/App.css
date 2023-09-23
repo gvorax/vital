@@ -1,0 +1,18 @@
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
