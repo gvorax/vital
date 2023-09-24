@@ -9,14 +9,14 @@
   position: relative;
 
   .img img {
-    width: 250px;
+    width: 180px;
   }
 
   .img.cooler {
     position: relative;
     z-index: 99;
     animation: coolerAnime 2s linear;
-    transform: translateY(-120px);
+    transform: translateY(-70px);
   }
 
   .img.water {
@@ -93,6 +93,6 @@
   }
 
   100% {
-    transform: translateY(-120px);
+    transform: translateY(-70px);
   }
 }

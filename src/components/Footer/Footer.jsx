@@ -15,17 +15,17 @@ const Footer = () => {
           </div>
           <div className="socials">
             <div className="icon">
-              <a href="#">
+              <a href="https://t.me/selvauz">
                 <img src={telegram} alt="" />
               </a>
             </div>
             <div className="icon">
-              <a href="#">
+              <a href="https://www.instagram.com/Selva.uz/">
                 <img src={instagram} alt="" />
               </a>
             </div>
             <div className="icon">
-              <a href="#">
+              <a href="https://www.facebook.com/selva.uz/">
                 <img src={facebook} alt="" />
               </a>
             </div>

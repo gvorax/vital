@@ -5,6 +5,19 @@
   align-items: center;
   margin-bottom: 40px;
 
+  .socials {
+    display: flex;
+    gap: 20px;
+
+    .icon {
+      max-width: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .box {
     width: 40%;
     padding: 20px;

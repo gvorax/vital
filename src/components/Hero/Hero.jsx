@@ -1,5 +1,5 @@
 import React from "react";
-import Cooler from "../../assets/cooler.png";
+import Cooler from "../../assets/Subject.png";
 import Water from "../../assets/bottleWater.png";
 import "./HeroStyle.scss";
 import AOS from "aos";
@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="img cooler">
-        <img src={Cooler} alt="" className="img_cooler" />
+        <img src={Cooler} alt="" className="img_cooler" width="100%"/>
       </div>
       <div className="img water">
         <img src={Water} alt="" className="img_water" />

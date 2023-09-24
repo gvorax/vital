@@ -13,7 +13,7 @@ AOS.init();
 import { FreeMode, Navigation, Autoplay } from "swiper/modules";
 
 import Bottle from "../../assets/cooler1-removebg-preview.png";
-import Water from "../../assets/bootle.jpg";
+import Water from "../../assets/bootle.png";
 
 import "./ShopStyle.scss";
 

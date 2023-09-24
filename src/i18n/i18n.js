@@ -26,11 +26,7 @@ i18n.use(initReactI18next).init({
         soat davomida yetkazib beradi. Asosiysi mijoz nechanchi qavatdan
         yashashidan qat’iy nazar olib chiqib berishi ta’minlanadi.`,
         coolerTitle: `Kuller yetkazib berish haqida`,
-        coolerSubtitle: `Selva suvlarini yetkazib berish Toshkent shaxar va unga tutash
-        xududlarga amalga oshiriladi. Yetkazib berish xizmati bepul.
-        Mijozning buyurtma qilgan vaqtdan boshlab kompaniya suvlarni 24
-        soat davomida yetkazib beradi. Asosiysi mijoz nechanchi qavatdan
-        yashashidan qat’iy nazar olib chiqib berishi ta’minlanadi.`,
+        coolerSubtitle: `O'zbekiston bo'ylab bepul .Toshkent shahrida istiqomat qiladiganlar uchun kulerni yetkazib o'rnatib beriladi Selva kulerlariga 13 oy bepul hizmati mavjud,servis markazi Toshkent shahrida`,
       },
     },
     rus: {
@@ -58,11 +54,7 @@ i18n.use(initReactI18next).init({
         доставка в течение часа. Главное, с какого этажа клиент
         независимо от места жительства.`,
         coolerTitle: `О доставке  Кулер`,
-        coolerSubtitle: `Поставки воды Сельва в Ташкент и прилегающие районы
-        проводится в регионах. Услуга доставки бесплатная.
-        С момента заказа клиента компания производит внедорожники 24
-        доставка в течение часа. Главное, с какого этажа клиент
-        независимо от места жительства.`,
+        coolerSubtitle: `Бесплатно по всему Узбекистану. Охладители будут доставлены и установлены для жителей Ташкента.Охладители Selva имеют 13 месяцев бесплатного обслуживания, сервисный центр находится в Ташкенте.`,
       },
     },
   },
