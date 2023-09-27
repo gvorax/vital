@@ -27,6 +27,22 @@ i18n.use(initReactI18next).init({
         yashashidan qat’iy nazar olib chiqib berishi ta’minlanadi.`,
         coolerTitle: `Kuller yetkazib berish haqida`,
         coolerSubtitle: `O'zbekiston bo'ylab bepul .Toshkent shahrida istiqomat qiladiganlar uchun kulerni yetkazib o'rnatib beriladi Selva kulerlariga 13 oy bepul hizmati mavjud,servis markazi Toshkent shahrida`,
+        shopTitle:`Shop`,
+        shopSubTitle:`Selva by Vital bu nima? `,
+        shopPar:`Kompaniya Vital brendi bilan hamkorlikda o’z suvlarini ishlab
+        chiqaradi.`,
+        shopTitle2:`Bu nima beradi ?`,
+        shopPar2:`Vital kompaniyasi Xitoy va Yaponiya texnalogiysi asosida ya’ni
+        inson omili aralashuvi siz o’z suvlarini ishlab chiqaradi. Ushbu
+        jarayonda suv 9 bosqichda suvni tozlanib, bir marotabalik
+        qadoqlarga avtomat ravishda qadoqlanadi. Bo’sh idishlarning o’zi
+        ham 3 xil haroratda 15 bosqichlik tozalash konveyridan avtomat
+        ravihda o’tib idishlar suv quyish bo’limlariga avtomat tarzda
+        o’tkaziladi.`,
+        shopBuy:`Sotib olish`,
+        contactTitle:`Biz bilan bog'lanish`,
+        location:`Shayxontohur, Toshkent`,
+
       },
     },
     rus: {
@@ -55,8 +71,65 @@ i18n.use(initReactI18next).init({
         независимо от места жительства.`,
         coolerTitle: `О доставке  Кулер`,
         coolerSubtitle: `Бесплатно по всему Узбекистану. Охладители будут доставлены и установлены для жителей Ташкента.Охладители Selva имеют 13 месяцев бесплатного обслуживания, сервисный центр находится в Ташкенте.`,
+        shopTitle:`Магазин`,
+        shopSubTitle:`Что такое Сельва от Витала?`,
+        shopPar:`Компания производит собственную воду в сотрудничестве с брендом Vital.
+        излучает`,
+        shopTitle2:`Что это дает?`,
+        shopPar2:`Компания Vital основана на китайской и японской технологии.
+        вмешательство человека производит собственную воду. Этот
+        При этом вода очищается в 9 этапов, один раз
+        автоматически упаковываются в пакеты. Сами пустые контейнеры
+        также автоматический с 15-ступенчатым конвейером очистки при 3 различных температурах
+        контейнеры проходят по проходу и автоматически поступают на станции заправки воды
+        будет проведено.`,
+        shopBuy:`Покупка`,
+        contactTitle:`Cвязаться с нами`,
+        location:`Шайхантахурский, Ташкент`,
       },
     },
+    eng:{
+      translation: {
+        shop: "Market",
+        about: "About us",
+        contact: "Contact",
+        greeting: "Assalomu aleykum",
+        intro_title: `My name is Nilufar, how can I help you?`,
+        intro_subtitle: `You can contact us if you have any questions)`,
+        aboutTitle: `Under the Selva brand, the company has been for water since 2018
+        bottled water dispensers (coolers) throughout Uzbekistan
+        delivering high-level service to the people of our country
+        has been showing. The company is very big in a short time
+        we can say that it has passed the milestones. Based on this
+        company according to customers' trust and their demand
+        18.9 liters of mountain water under its Selva brand in 2020
+        started delivering to its customers.`,
+        waterTitle: `About water supply`,
+        waterSubtitle: `Delivery of Selva water to Tashkent city and its vicinity
+        carried out to the regions. Delivery service is free.
+        The company supplies water for 24 hours from the moment the customer orders
+        delivers during the hour. The main thing is what floor the customer is from
+        regardless of residence, it is provided.`,
+        coolerTitle: `About courier delivery`,
+        coolerSubtitle: `Free of charge throughout Uzbekistan. Coolers will be delivered and installed for residents of Tashkent. Selva coolers have 13 months of free service, the service center is in Tashkent.`,
+        shopTitle:`Shop`,
+        shopSubTitle:`What is Selva by Vital?`,
+        shopPar:`The company produces its own water in cooperation with the Vital brand
+        emits`,
+        shopTitle2:`What does it give?`,
+        shopPar2:`Vital company is based on Chinese and Japanese technology
+        human intervention produces its own water. This
+        In the process, the water is purified in 9 stages, once
+        are automatically packed into packages. Empty containers themselves
+        also automatic from a 15-stage cleaning conveyor at 3 different temperatures
+        the containers pass through the aisle and go to the water filling stations automatically
+        will be held.`,
+        shopBuy:`Buy`,
+        contactTitle:`Contact us`,
+        location:`Shaikhontohur, Tashkent`,
+
+      },
+    }
   },
   lng: localStorage.getItem("language") || "uz",
   fallbackLng: "uz",

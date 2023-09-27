@@ -3,7 +3,9 @@ import telegram from "../../assets/telegram.png";
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
 import "./FooterStyle.scss";
+import { Link } from "react-scroll";
 import logo from "../../assets/logo.png";
+import { t } from "i18next";
 
 const Footer = () => {
   return (
@@ -13,6 +15,38 @@ const Footer = () => {
           <div className="img_box">
             <img src={logo} alt="" />
           </div>
+          <ul className="ul">
+            <Link
+              className="nav_link"
+              to="shop"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <li>{t("shop")}</li>
+            </Link>
+            <Link
+              className="nav_link"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <li>{t("about")}</li>
+            </Link>
+            <Link
+              className="nav_link"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <li>{t("contact")}</li>
+            </Link>
+          </ul>
           <div className="socials">
             <div className="icon">
               <a href="https://t.me/selvauz">
@@ -30,20 +64,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
-        <div className="footer_bottom">
-          <ul>
-            <a href="#" className="nav_link">
-              <li>Shop</li>
-            </a>
-            <a href="#" className="nav_link">
-              <li>About us</li>
-            </a>
-            <a href="#" className="nav_link">
-              <li>Contacts</li>
-            </a>
-          </ul>
-          <p>@gvorax 09.2023</p>
         </div>
       </div>
     </div>

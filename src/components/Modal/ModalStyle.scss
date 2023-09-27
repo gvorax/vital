@@ -88,3 +88,29 @@
     padding: 30px 50px !important;
   }
 }
+
+@media screen and (max-width:576px) {
+  .menu_model{
+    .modal_box{
+      padding: 20px 40px;
+      h2{
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .modal_form{
+        label{
+          font-size: 18px;
+        }
+        input{
+          padding: 6px 12px;
+          font-size: 16px;
+        }
+        button{
+          font-size: 18px;
+          padding: 6px 0;
+        }
+      }
+    }
+  }
+}

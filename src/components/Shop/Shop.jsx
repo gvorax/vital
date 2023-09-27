@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { t } from "i18next";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -80,9 +80,11 @@ const Shop = ({ modal, setModal }) => {
 
   return (
     <div className="shop" id="shop">
-      <div className="container">
-        <h2 data-aos="fade-up" className="shop_title">Shop</h2>
-        <div className="information container">
+      <div>
+        <h2 data-aos="fade-up" className="shop_title">
+          {t("shopTitle")}
+        </h2>
+        <div className="information">
           <div
             className="about_img"
             data-aos="fade-right"
@@ -95,36 +97,28 @@ const Shop = ({ modal, setModal }) => {
             data-aos="fade-left"
             data-aos-duration="2500"
           >
-            <h2>Selva by Vital bu nima? </h2>
-            <p>
-              Kompaniya Vital brendi bilan hamkorlikda o’z suvlarini ishlab
-              chiqaradi.
-            </p>
-            <h2>Bu nima beradi ?</h2>
-            <p>
-              Vital kompaniyasi Xitoy va Yaponiya texnalogiysi asosida ya’ni
-              inson omili aralashuvi siz o’z suvlarini ishlab chiqaradi. Ushbu
-              jarayonda suv 9 bosqichda suvni tozlanib, bir marotabalik
-              qadoqlarga avtomat ravishda qadoqlanadi. Bo’sh idishlarning o’zi
-              ham 3 xil haroratda 15 bosqichlik tozalash konveyridan avtomat
-              ravihda o’tib idishlar suv quyish bo’limlariga avtomat tarzda
-              o’tkaziladi.
-            </p>
+            <h2>{t("shopSubTitle")}</h2>
+            <p>{t("shopPar")}</p>
+            <h2>{t("shopTitle2")}</h2>
+            <p>{t("shopPar2")}</p>
             <button onClick={() => setModal(true)} className="item_btn">
-              {" "}
-              Sotib olish{" "}
+              {t("shopBuy")}
             </button>
           </div>
         </div>
         <div data-aos="fade-up">
           <Swiper
             breakpoints={{
+              200: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
               640: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 40,
               },
               1024: {
@@ -193,7 +187,7 @@ const Shop = ({ modal, setModal }) => {
                     </div>
                     <p>{item.model}</p>
                     <button className="item_btn" onClick={() => setModal(true)}>
-                      Buy
+                      {t("shopBuy")}
                     </button>
                     {info && item.id === num && (
                       <div className="bg_transparent">
