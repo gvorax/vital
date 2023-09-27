@@ -241,7 +241,7 @@
 
         h2 {
           font-size: 44px;
-          line-height: 30px;
+          line-height: 50px;
           text-align: center;
         }
 
@@ -253,11 +253,18 @@
           font-weight: normal;
         }
 
+        .btn_div{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         a {
           padding: 8px 16px;
           font-size: 18px;
           border-radius: 5px;
           margin-bottom: 10px;
+          text-align: center;
         }
       }
     }
@@ -272,7 +279,7 @@
       }
       .product_first,
       .product_second {
-        height: 300px;
+        height: 400px;
       }
 
       .product_data {

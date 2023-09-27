@@ -37,6 +37,7 @@
     justify-content: space-between;
     margin-top: 70px;
     padding: 20px 40px;
+    background: #000;
 
     .hero_subtitle {
       width: 400px;
@@ -125,8 +126,36 @@
 
     .hero_title {
       .hero_subtitle {
+        height: 300px;
+        padding: 20px;
         h2 {
           font-size: 24px !important;
+          margin-bottom: 10px;
+        }
+
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .img{
+      display: none;
+    }
+
+    .hero_title {
+      padding: 0 !important;
+      padding-top: 20px;
+      .hero_subtitle {
+        width: 100%;
+        padding: 20px;
+        h2 {
+          font-size: 24px !important;
+          margin-bottom: 10px;
         }
 
         p{

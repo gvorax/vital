@@ -110,6 +110,10 @@ const Shop = ({ modal, setModal }) => {
           <Swiper
             breakpoints={{
               200: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              450:{
                 slidesPerView: 2,
                 spaceBetween: 20,
               },

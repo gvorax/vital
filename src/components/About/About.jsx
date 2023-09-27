@@ -64,7 +64,9 @@ const About = () => {
           <p>
             {t('aboutTitle')}
           </p>
+          <div className="btn_div">
           <a href="#">{t('contact')}</a>
+          </div>
         </div>
       </div>
 
