@@ -154,16 +154,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    .container {
-      .nav-elements ul li:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   .navbar {
     .container {
