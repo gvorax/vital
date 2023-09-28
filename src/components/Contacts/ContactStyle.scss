@@ -25,6 +25,7 @@
     h2 {
       color: rgb(18, 65, 107);
       font-size: 48px;
+      margin-bottom: 20px;
     }
 
     .contact_text {
@@ -61,11 +62,13 @@
     width: 60%;
     height: 600px;
     border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(6, 24, 44, 0.5) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
     iframe {
       border: none;
       border-radius: 20px;
+
     }
   }
 }

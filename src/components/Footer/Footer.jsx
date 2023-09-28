@@ -1,7 +1,7 @@
 import React from "react";
-import telegram from "../../assets/telegram.png";
-import instagram from "../../assets/instagram.png";
-import facebook from "../../assets/facebook.png";
+import telegram from "../../assets/telegramblack.png";
+import instagram from "../../assets/instagramblack.png";
+import facebook from "../../assets/facebookblack.png";
 import "./FooterStyle.scss";
 import { Link } from "react-scroll";
 import logo from "../../assets/logo.png";

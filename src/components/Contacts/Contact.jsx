@@ -17,7 +17,7 @@ const Contact = () => {
             <h2>{t('contactTitle')}</h2>
             <div className="contact_text">
               {" "}
-              <div className="span">
+              {/* <div className="span">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const Contact = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </div>{" "}
+              </div>{" "} */}
               <div className="socials">
                 <div className="icon">
                   <a href="https://t.me/selvauz">
@@ -51,7 +51,7 @@ const Contact = () => {
             </div>
             <div className="contact_text">
               {" "}
-              <div className="span">
+              {/* <div className="span">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ const Contact = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </div>{" "}
+              </div>{" "} */}
               <p>
                 {" "}
                 <a href="tel:+998999999999">+998 99 881 30 00</a>
@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
             <div className="contact_text">
               {" "}
-              <div className="span">
+              {/* <div className="span">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -85,7 +85,7 @@ const Contact = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </div>{" "}
+              </div>{" "} */}
               <p>
                 {t('location')}
               </p>
