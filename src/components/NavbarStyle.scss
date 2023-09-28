@@ -149,54 +149,54 @@
   }
 }
 
-//  @media (max-width: 768px) {
-//   .navbar {
-//     .container {
-//       .menu-icon {
-//         display: block;
-//         cursor: pointer;
-//       }
+ @media (max-width: 768px) {
+  .navbar {
+    .container {
+      .menu-icon {
+        display: block;
+        cursor: pointer;
+      }
 
-//       .nav-elements {
-//         position: absolute;
-//         right: 0;
-//         top: 60px;
-//         background-color: rgba(0, 0, 0, 0.5);
-//         backdrop-filter: blur(5px) !important;
-//         -webkit-backdrop-filter: blur(5px);
-//         width: 0px;
-//         height: calc(100vh - 60px);
-//         transition: all 0.3s ease-in;
-//         overflow: hidden;
-//         display: flex;
-//         flex-direction: column;
-//         z-index: 9999999999;
+      .nav-elements {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px) !important;
+        -webkit-backdrop-filter: blur(5px);
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        z-index: 9999999999;
 
-//         &.active {
-//           width: 270px;
-//         }
+        &.active {
+          width: 270px;
+        }
 
-//         ul {
-//           display: flex;
-//           flex-direction: column;
-//           margin-bottom: 20px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
 
-//           li {
-//             margin-right: unset;
-//             margin-top: 22px;
+          li {
+            margin-right: unset;
+            margin-top: 22px;
 
-//             &:not(:last-child) {
-//               margin-right: 30px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+            &:not(:last-child) {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-// @media (max-width: 535px) {
-//   .navbar .container .logo {
-//     max-width: 180px;
-//   }
-// }
+@media (max-width: 535px) {
+  .navbar .container .logo {
+    max-width: 180px;
+  }
+}

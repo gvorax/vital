@@ -10,7 +10,6 @@ import { Link } from "react-scroll";
 
 const NavbarX = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  localStorage.setItem("language","uz")
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -108,7 +107,7 @@ const NavbarX = () => {
             </Link>
             <div className="lng">
               <div className="dropdown">
-                {localStorage.getItem("language") == "uz" ? (
+                {localStorage.getItem("language") == "uz" || localStorage.getItem("language") == null ? (
                   <div className="lan">
                     <img src={UzbekFlag} alt="" />
                     <button className="dropbtn">Uzbek</button>
