@@ -10,6 +10,7 @@ import { Link } from "react-scroll";
 
 const NavbarX = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  localStorage.setItem("language","uz")
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -27,6 +28,7 @@ const NavbarX = () => {
     localStorage.setItem("language", lng);
     location.reload();
   };
+
 
   return (
     <nav className="navbar">
@@ -111,7 +113,7 @@ const NavbarX = () => {
                     <img src={UzbekFlag} alt="" />
                     <button className="dropbtn">Uzbek</button>
                   </div>
-                ) : null}
+                ) :null}
                 {localStorage.getItem("language") == "rus" ? (
                   <div className="lan">
                     <img src={RussianFlag} alt="" />
