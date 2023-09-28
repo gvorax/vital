@@ -60,12 +60,10 @@ const About = () => {
           data-aos="fade-left"
           data-aos-duration="2500"
         >
-          <h2>{t('about')}</h2>
-          <p>
-            {t('aboutTitle')}
-          </p>
+          <h2>{t("about")}</h2>
+          <p>{t("aboutTitle")}</p>
           <div className="btn_div">
-          <a href="#">{t('contact')}</a>
+            <a href="#">{t("contact")}</a>
           </div>
         </div>
       </div>
@@ -78,10 +76,10 @@ const About = () => {
         >
           <div className="product_first"></div>
           <div className="product_data">
-            <h2>{t('waterTitle')}</h2>
-            <p>
-                {t('waterSubtitle')}
-            </p>
+            <div className="effect">
+              <h2>{t("waterTitle")}</h2>
+              <p>{t("waterSubtitle")}</p>
+            </div>
           </div>
         </div>
         <div
@@ -91,10 +89,10 @@ const About = () => {
         >
           <div className="product_second"></div>
           <div className="product_data">
-            <h2>{t('coolerTitle')}</h2>
-            <p>
-                {t('coolerSubtitle')}
-            </p>
+            <div className="effect">
+              <h2>{t("coolerTitle")}</h2>
+              <p>{t("coolerSubtitle")}</p>
+            </div>
           </div>
         </div>
       </div>
