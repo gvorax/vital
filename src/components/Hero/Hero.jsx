@@ -18,7 +18,7 @@ const Hero = () => {
         <img src={Cooler} alt="" className="img_cooler" width="100%"/>
       </div>
       <div className="img water">
-        <img src={Water} alt="" className="img_water" />
+        <img src={Water} alt="" className="img_water" style={{opacity:"0.9"}} />
       </div>
       <div className="hero_title">
         <div
