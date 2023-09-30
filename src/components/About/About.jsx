@@ -15,35 +15,35 @@ const About = () => {
             src="https://justwater.com/cdn/shop/files/Droplets_1000px.webp?v=1677497199&width=550"
             alt=""
           />
-          <p>Sustainably Sourced</p>
+          <p>{t("adsOne")}</p>
         </div>
         <div className="quality">
           <img
             src="//justwater.com/cdn/shop/files/ICON_Naturally_Occurring_Mineral_Content_8b9e3e03-3df6-439b-8331-b20870c7cc0f.png?v=1677497220&width=1420"
             alt=""
           />
-          <p>Sustainably Sourced</p>
+          <p>{t("adsTwo")}</p>
         </div>
         <div className="quality">
           <img
             src="https://justwater.com/cdn/shop/files/Bcorp_1000px_33e81898-f588-4bb7-a838-34dfd1491234.png?v=1677497244&width=1420"
             alt=""
           />
-          <p>Sustainably Sourced</p>
+          <p>{t("adsThree")}</p>
         </div>
         <div className="quality">
           <img
             src="https://justwater.com/cdn/shop/files/NationalMinoritySupplierCouncil_1000px_86a75e1c-bf17-4bd8-9d95-ec66dc40043a.png?v=1677497266&width=1420"
             alt=""
           />
-          <p>Sustainably Sourced</p>
+          <p>{t("adsFour")}</p>
         </div>
         <div className="quality">
           <img
             src="https://justwater.com/cdn/shop/files/ICON_Recycleable1_f7ab0b65-7320-4ffe-8ced-59be1d756d82.png?v=1677497284&width=14200"
             alt=""
           />
-          <p>Sustainably Sourced</p>
+          <p>{t("adsFive")}</p>
         </div>
       </div>
 

@@ -28,7 +28,7 @@ const Hero = () => {
         >
           <h2>
             <Typewriter
-              words={[`${t("greeting")}👋`]}
+              words={[`${t("greeting")}`]}
               autoStart={true}
               loop={true}
             />

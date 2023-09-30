@@ -19,14 +19,19 @@ i18n.use(initReactI18next).init({
         mijozlarning ishonchi va ularning talabiga binoan kompaniya
         2020-yilda o’zining Selva brendi ostida 18,9 litirlik tog’ suvlarini
         o’z mijozlariga yetkazib berishni boshladi.`,
+        adsOne:`Barqaror manba`,
+        adsTwo:`Minerallarga boy`,
+        adsThree:`Ishonchli kompaniya`,
+        adsFour:`Tezkor yetkazish`,
+        adsFive:`100% qayta ishlanadigan`,
         waterTitle: `Suv yetkazib berish haqida`,
-        waterSubtitle: ` Selva suvlarini yetkazib berish Toshkent shaxar va unga tutash
+        waterSubtitle: ` Selva suvlarini yetkazib berish  Toshkent shaxar va unga tutash
         xududlarga amalga oshiriladi. Yetkazib berish xizmati bepul.
         Mijozning buyurtma qilgan vaqtdan boshlab kompaniya suvlarni 24
         soat davomida yetkazib beradi. Asosiysi mijoz nechanchi qavatdan
         yashashidan qat’iy nazar olib chiqib berishi ta’minlanadi.`,
         coolerTitle: `Kuller yetkazib berish haqida`,
-        coolerSubtitle: `O'zbekiston bo'ylab bepul .Toshkent shahrida istiqomat qiladiganlar uchun kulerni yetkazib o'rnatib beriladi Selva kulerlariga 13 oy bepul hizmati mavjud,servis markazi Toshkent shahrida`,
+        coolerSubtitle: `O'zbekiston bo'ylab bepul. Toshkent shahrida istiqomat qiladiganlar uchun kulerni yetkazib o'rnatib beriladi Selva kulerlariga 13 oy bepul hizmati mavjud,servis markazi Toshkent shahrida`,
         shopTitle:`Shop`,
         shopSubTitle:`Selva by Vital bu nima? `,
         shopPar:`Kompaniya Vital brendi bilan hamkorlikda o’z suvlarini ishlab
@@ -63,6 +68,11 @@ i18n.use(initReactI18next).init({
         В 2020 году под собственным брендом Selva мы выпустим 18,9-литровый горный внедорожник
         начал доставлять своим клиентам.
         `,
+        adsOne:`Устойчивый ресурс`,
+        adsTwo:`Богат минералами`,
+        adsThree:`Надежная компания`,
+        adsFour:`Быстрая доставка`,
+        adsFive:`100% перерабатываемый`,
         waterTitle: `О доставке воды`,
         waterSubtitle: `Поставки воды Сельва в Ташкент и прилегающие районы
         проводится в регионах. Услуга доставки бесплатная.
@@ -90,7 +100,7 @@ i18n.use(initReactI18next).init({
     },
     eng:{
       translation: {
-        shop: "Market",
+        shop: "Shop",
         about: "About us",
         contact: "Contact",
         greeting: "Assalomu aleykum",
@@ -104,6 +114,11 @@ i18n.use(initReactI18next).init({
         company according to customers' trust and their demand
         18.9 liters of mountain water under its Selva brand in 2020
         started delivering to its customers.`,
+        adsOne:`Sustainably Sourced`,
+        adsTwo:`Naturally Occurring Minerals`,
+        adsThree:`A reliable company`,
+        adsFour:`Fast delivery`,
+        adsFive:`100% Recyclable`,
         waterTitle: `About water supply`,
         waterSubtitle: `Delivery of Selva water to Tashkent city and its vicinity
         carried out to the regions. Delivery service is free.

@@ -1,5 +1,7 @@
 .hero {
+  // padding-top: 100px;
   width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items:flex-end;
   justify-content: center;
@@ -22,24 +24,25 @@
   .img.water {
     animation: waterAnime 2s linear;
     transform: rotate(180deg) translateY(0px) translateX(0px);
+    z-index: 0;
   }
 
   .hero_title {
     position: absolute;
     top: 0;
-    left: 10%;
+    left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     z-index: 2;
     display: flex;
-    // align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 70px;
-    padding: 20px 40px;
+    padding: 40px 0px;
 
     .hero_subtitle {
-      width: 400px;
+      width: 420px;
       height: 320px;
       padding: 40px;
       background: rgba(214, 214, 214, 0.616);
@@ -110,6 +113,7 @@
 
     flex-direction: column-reverse;
     position: relative;
+
   }
 
   .img img {
@@ -117,13 +121,38 @@
   }
 }
 
+@media (min-width: 576px) and (max-width: 850px) {
+  .hero {
+    align-items: center;
+
+    .hero_title {
+      justify-content: center;
+      .hero_subtitle {
+        height: 320px;
+        padding: 40px;
+        h2 {
+          font-size: 24px !important;
+          margin-bottom: 10px;
+        }
+
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+}
+
 @media (max-width: 575.98px) {
   .hero {
+    align-items: center;
     .img img {
       width: 150px;
     }
 
     .hero_title {
+      left: 0;
       .hero_subtitle {
         height: 300px;
         padding: 20px;
@@ -147,6 +176,7 @@
     }
 
     .hero_title {
+      left: 0;
       padding: 0 !important;
       padding-top: 20px;
       .hero_subtitle {

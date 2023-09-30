@@ -6,7 +6,7 @@ import { useState } from "react";
 const Modal = ({ modal, setModal }) => {
   const [data, setData] = useState({
     name: "",
-    phone: 0,
+    phone: 998,
   });
   const handleChange = (e) => {
     const { name,value } = e.target;
@@ -43,9 +43,10 @@ const Modal = ({ modal, setModal }) => {
           />
           <label htmlFor="number">Telefon raqamingiz</label>
           <input
-            type="number"
+            type="text"
             placeholder="99 999 99 99"
             required
+            maxLength={12}
             value={data.phone}
             name="phone"
             onChange={(e)=>handleChange(e)}

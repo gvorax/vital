@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeaderStyle.scss";
-import Navbar from "../NavbarX";
+import Navbar from "../Navbar/NavbarX";
 import Hero from "../Hero/Hero";
 
 import $ from 'jquery';
