@@ -2,25 +2,61 @@ import React from "react";
 import "./ModalStyle.scss";
 import { ToastContainer, toast } from "react-toastify";
 import { useState } from "react";
+import { useContext } from "react";
+import { ProductContext } from "../../context/context";
+import axios from "axios";
 
 const Modal = ({ modal, setModal }) => {
+  const { pro_id, setPro_id } = useContext(ProductContext);
+
   const [data, setData] = useState({
     name: "",
-    phone: 998,
+    phone_number: "",
   });
+
   const handleChange = (e) => {
-    const { name,value } = e.target;
+    const { name, value } = e.target;
     setData((data) => ({
       ...data,
       [name]: value,
     }));
   };
-  const handleSubmit = () => {
-    if (data.name && data.phone) {
-      toast.success("Tez orada biz siz bilan bog'lanamiz...", {
-        position: toast.POSITION.TOP_RIGHT,
-      });
+  
+  const getWater = async () =>{
+    const res = await axios.get('https://api.selva.uz/api/product/all');
+
+
+    let data1 = res.data.data.products.filter(item => item?.type == "water");
+    let id = data1[0]._id
+    setPro_id(id)
+
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    getWater();
+
+    if (data.name && data.phone_number && pro_id) {
       setModal(false);
+
+      let res = await axios.post(`https://api.selva.uz/api/order/create`, {
+        name: data.name,
+        phone_number: data.phone_number,
+        product_id: pro_id,
+      });
+
+      if(res.status == 201){
+        toast.success("Tez orada biz siz bilan bog'lanamiz...", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+        setModal(false);
+      }else{
+        toast.warning("Biz bilan muammo sodir bo'ldi, Iltimos bizga qo'ng'iroq qiling!", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
+      
+
     } else {
       toast.warn("Ma'lumotlarni to'liq to'ldiring...", {
         position: toast.POSITION.TOP_CENTER,
@@ -39,17 +75,17 @@ const Modal = ({ modal, setModal }) => {
             required
             value={data.name}
             name="name"
-            onChange={(e)=>handleChange(e)}
+            onChange={(e) => handleChange(e)}
           />
           <label htmlFor="number">Telefon raqamingiz</label>
           <input
             type="text"
-            placeholder="99 999 99 99"
+            placeholder="99 123 45 67"
             required
-            maxLength={12}
-            value={data.phone}
-            name="phone"
-            onChange={(e)=>handleChange(e)}
+            maxLength={9}
+            value={data.phone_number}
+            name="phone_number"
+            onChange={(e) => handleChange(e)}
           />
           <button onClick={handleSubmit}>Yuborish</button>
         </form>

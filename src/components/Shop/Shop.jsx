@@ -16,67 +16,27 @@ import Bottle from "../../assets/cooler1-removebg-preview.png";
 import Water from "../../assets/bootle.png";
 
 import "./ShopStyle.scss";
+import ProductModal from "../Modal/ProductModal";
+import { useEffect } from "react";
+import axios from "axios";
+import { useContext } from "react";
+import { ProductContext } from "../../context/context";
 
 const Shop = ({ modal, setModal }) => {
+  const { setPro_id } = useContext(ProductContext);
   const [info, setInfo] = useState(false);
   const [num, setNum] = useState();
-  const data = [
-    {
-      id: 123123123,
-      model: "MF-42342",
-      info: {
-        title: "Модель Sel-301",
-        coldInfo: "❄️3 лит/в час холодная вода (+10)С°",
-        hotInfo: "☕️5 лит/ в час горячая вода (+95)С°",
-        delivery: "🚛Доставка и установка по городу",
-        warrantly: "🔧Сервис 1 год",
-      },
-    },
-    {
-      id: 123123122313,
-      model: "MF-42342",
-      info: {
-        title: "Модель Sel-301",
-        coldInfo: "❄️3 лит/в час холодная вода (+10)С°",
-        hotInfo: "☕️5 лит/ в час горячая вода (+95)С°",
-        delivery: "🚛Доставка и установка по городу",
-        warrantly: "🔧Сервис 1 год",
-      },
-    },
-    {
-      id: 123123123112,
-      model: "MF-42342",
-      info: {
-        title: "Модель Sel-301",
-        coldInfo: "❄️3 лит/в час холодная вода (+10)С°",
-        hotInfo: "☕️5 лит/ в час горячая вода (+95)С°",
-        delivery: "🚛Доставка и установка по городу",
-        warrantly: "🔧Сервис 1 год",
-      },
-    },
-    {
-      id: 1231231235555,
-      model: "MF-42342",
-      info: {
-        title: "Модель Sel-301",
-        coldInfo: "❄️3 лит/в час холодная вода (+10)С°",
-        hotInfo: "☕️5 лит/ в час горячая вода (+95)С°",
-        delivery: "🚛Доставка и установка по городу",
-        warrantly: "🔧Сервис 1 год",
-      },
-    },
-    {
-      id: 123123123777,
-      model: "MF-42342",
-      info: {
-        title: "Модель Sel-301",
-        coldInfo: "❄️3 лит/в час холодная вода (+10)С°",
-        hotInfo: "☕️5 лит/ в час горячая вода (+95)С°",
-        delivery: "🚛Доставка и установка по городу",
-        warrantly: "🔧Сервис 1 год",
-      },
-    },
-  ];
+  const [data1, setData1] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get("https://api.selva.uz/api/product/all");
+
+      setData1(res.data.data.products);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="shop" id="shop">
@@ -113,7 +73,7 @@ const Shop = ({ modal, setModal }) => {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
-              450:{
+              450: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -141,13 +101,26 @@ const Shop = ({ modal, setModal }) => {
             modules={[FreeMode, Navigation, Autoplay]}
             className="mySwiper"
           >
-            {data.map((item, index) => {
+            {data1.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="shop_item">
+                  <div
+                    className="shop_item"
+                    // onClick={() => {
+                    //   setInfo((prev) => !prev);
+                    //   setNum();
+                    // }}
+                    onClick={() => {
+                      setInfo(true);
+                      setNum(item._id);
+                    }}
+                  >
                     <div className="item_img">
-                      <img src={Bottle} alt="" />
-                      <div className="toggle">
+                      <img
+                        src={`https://api.selva.uz/api/api/file/${item.images[0]}`}
+                        alt=""
+                      />
+                      {/* <div className="toggle">
                         {info && item.id === num ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +150,7 @@ const Shop = ({ modal, setModal }) => {
                             className="w-6 h-6 hamburger"
                             onClick={() => {
                               setInfo(true);
-                              setNum(item.id);
+                              setNum(item._id);
                             }}
                           >
                             <path
@@ -187,32 +160,18 @@ const Shop = ({ modal, setModal }) => {
                             />
                           </svg>
                         )}
-                      </div>
+                      </div> */}
                     </div>
-                    <p>{item.model}</p>
-                    <button className="item_btn" onClick={() => setModal(true)}>
+                    <p>{item.name}</p>
+                    <button
+                      className="item_btn"
+                      // onClick={() => {
+                      //   setPro_id(item._id);
+                      //   setModal(true);
+                      // }}
+                    >
                       {t("shopBuy")}
                     </button>
-                    {info && item.id === num && (
-                      <div className="bg_transparent">
-                        <div className="item_data">
-                          <p> {item.info.title} </p>
-                          <p>{item.info.coldInfo}</p>
-                          <p>{item.info.hotInfo}</p>
-                          <p>{item.info.delivery}</p>
-                          <p>{item.info.warrantly}</p>
-                          <button
-                            className="modal_btn"
-                            onClick={() => {
-                              setInfo(false);
-                              setModal(true);
-                            }}
-                          >
-                            Buy
-                          </button>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </SwiperSlide>
               );
@@ -220,6 +179,7 @@ const Shop = ({ modal, setModal }) => {
           </Swiper>
         </div>
       </div>
+      {info && <ProductModal setInfo={setInfo} setModal={setModal} num={num} />}
     </div>
   );
 };

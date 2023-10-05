@@ -5,6 +5,7 @@ import "./AboutStyle.scss";
 import Profile from "../../assets/profile.png";
 import { t } from "i18next";
 AOS.init();
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -63,7 +64,17 @@ const About = () => {
           <h2>{t("about")}</h2>
           <p>{t("aboutTitle")}</p>
           <div className="btn_div">
-            <a href="#">{t("contact")}</a>
+          <Link
+              className="nav_link"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              style={{cursor:"pointer"}}
+            >
+              {t("contact")}
+            </Link>
           </div>
         </div>
       </div>

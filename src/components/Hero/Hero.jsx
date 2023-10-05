@@ -5,8 +5,8 @@ import "./HeroStyle.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Typewriter } from "react-simple-typewriter";
-import Car from "../../assets/car_delivery.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 AOS.init();
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
         <img src={Cooler} alt="" className="img_cooler" width="100%"/>
       </div>
       <div className="img water">
-        <img src={Water} alt="" className="img_water" style={{opacity:"0.9"}} />
+        <img src={Water} alt="" className="img_water" width="100%" style={{opacity:"0.9"}} />
       </div>
       <div className="hero_title">
         <div
@@ -43,16 +43,19 @@ const Hero = () => {
               loop={true}
             />
           </p>
-          <a href="#contact" className="contact_link">
-            {t('contact')}
-          </a>
+          <Link
+              className="contact_link"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              style={{cursor:"pointer"}}
+            >
+              {t("contact")}
+            </Link>
         </div>
-        {/* <div
-          className=""
-          data-aos="fade-left"
-          data-aos-duration="2500"
-        >
-        </div> */}
+
       </div>
     </div>
   );
