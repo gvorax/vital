@@ -36,7 +36,7 @@ const ProductModal = ({ setModal, setInfo, num }) => {
           <div className="product_container">
             <div className="product_img">
               <img
-                src={`https://api.selva.uz/api/api/file/${data?.images[0]}`}
+                src={`https://selva.zirapcha.uz/api/api/file/${data?.images[0]}`}
                 alt=""
               />
             </div>
