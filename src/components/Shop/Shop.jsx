@@ -21,6 +21,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useContext } from "react";
 import { ProductContext } from "../../context/context";
+import { data } from "jquery";
 
 const Shop = ({ modal, setModal }) => {
   const { setPro_id } = useContext(ProductContext);
@@ -120,6 +121,7 @@ const Shop = ({ modal, setModal }) => {
                         src={`https://selva.zirapcha.uz/api/api/file/${item.images[0]}`}
                         alt=""
                       />
+
                       {/* <div className="toggle">
                         {info && item.id === num ? (
                           <svg

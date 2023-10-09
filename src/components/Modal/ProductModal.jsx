@@ -21,6 +21,7 @@ const ProductModal = ({ setModal, setInfo, num }) => {
     getProduct();
   }, []);
 
+
   const { setPro_id } = useContext(ProductContext);
 
   const onBuy = (id) => {
@@ -36,7 +37,7 @@ const ProductModal = ({ setModal, setInfo, num }) => {
           <div className="product_container">
             <div className="product_img">
               <img
-                src={`https://selva.zirapcha.uz/api/api/file/${data?.images[0]}`}
+                src={`https://selva.zirapcha.uz/api/api/file/${data.images[0]}`}
                 alt=""
               />
             </div>
