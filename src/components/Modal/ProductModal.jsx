@@ -13,7 +13,7 @@ const ProductModal = ({ setModal, setInfo, num }) => {
   useEffect(() => {
     setLoading(true);
     const getProduct = async () => {
-      const res = await axios.get(`https://api.selva.uz/api/product/${num}`);
+      const res = await axios.get(`https://selva.zirapcha.uz/api/product/${num}`);
       setLoading(false);
       setData(res.data.data.product);
     };

@@ -30,7 +30,7 @@ const Shop = ({ modal, setModal }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("https://api.selva.uz/api/product/all");
+      const res = await axios.get("https://selva.zirapcha.uz/api/product/all");
 
       setData1(res.data.data.products);
     };
@@ -117,7 +117,7 @@ const Shop = ({ modal, setModal }) => {
                   >
                     <div className="item_img">
                       <img
-                        src={`https://api.selva.uz/api/api/file/${item.images[0]}`}
+                        src={`https://selva.zirapcha.uz/api/api/file/${item.images[0]}`}
                         alt=""
                       />
                       {/* <div className="toggle">

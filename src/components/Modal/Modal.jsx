@@ -23,7 +23,7 @@ const Modal = ({ modal, setModal }) => {
   };
   
   const getWater = async () =>{
-    const res = await axios.get('https://api.selva.uz/api/product/all');
+    const res = await axios.get('https://selva.zirapcha.uz/api/product/all');
 
 
     let data1 = res.data.data.products.filter(item => item?.type == "water");
@@ -39,7 +39,7 @@ const Modal = ({ modal, setModal }) => {
     if (data.name && data.phone_number && pro_id) {
       setModal(false);
 
-      let res = await axios.post(`https://api.selva.uz/api/order/create`, {
+      let res = await axios.post(`https://selva.zirapcha.uz/api/order/create`, {
         name: data.name,
         phone_number: data.phone_number,
         product_id: pro_id,
